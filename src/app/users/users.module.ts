@@ -1,4 +1,4 @@
-import { NgModule, } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
@@ -6,11 +6,9 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserDocumentComponent } from './user-document/user-document.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
-import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { UserStatusComponent } from './user-status/user-status.component';
 // import {FormControl, Validators} from '@angular/forms';
-
-
-
 
 @NgModule({
   declarations: [
@@ -19,8 +17,8 @@ import { MatFormFieldModule} from '@angular/material/form-field';
     UserDashboardComponent,
     UserProfileComponent,
     UserDocumentComponent,
-    UserRegisterComponent
-    
+    UserRegisterComponent,
+    UserStatusComponent,
   ],
   imports: [
     CommonModule,
@@ -28,12 +26,6 @@ import { MatFormFieldModule} from '@angular/material/form-field';
     // FormControl,
     // Validators
   ],
-  exports: [
-    UserLoginComponent,
-    UserSignupComponent,
-    UserDashboardComponent
-  ]
+  exports: [UserLoginComponent, UserSignupComponent, UserDashboardComponent],
 })
-export class UsersModule { 
-  
-}
+export class UsersModule {}
